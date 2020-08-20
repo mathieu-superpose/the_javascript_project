@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Script 5</title>
+</head>
+
+<body>
+    <hr>
+    <h1>Script 5</h1>
+    <hr>
+    <p>Sous Linux : F12 puis onglet "console"</p>
+    <p>Sous Mac : ALT + CMD + I</p>
+    <hr>
+    <h4>2.3.2. Bibliothécaire </h4>
+    <p>C'est ton premier jour de stage au CDI du collège du coin. Tu dois aider la bibliothécaire à faire des statistiques dans la base de données de livres du collège et elle te donne ce jeu de données pour que tu maitrises le back-office du programme.</p>
+    <pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">const</span> books <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Gatsby le magnifique'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">133712</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">39</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'A la recherche du temps,perdu'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">237634</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">28</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Orgueil &amp; Préjugés'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">873495</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">67</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Les frères Karamazov'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">450911</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">55</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Dans les forêts de Sibérie'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">8376365</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">15</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Pourquoi j\'ai mangé mon père'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">450911</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">45</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Et on tuera tous les affreux'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">67565</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">36</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Le meilleur des mondes'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">88847</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">58</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'La disparition'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">364445</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">33</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'La lune seule le sait'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">63541</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">43</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Voyage au centre de la Terre'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">4656388</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">38</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'Guerre et Paix'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token number">748147</span><span class="token punctuation">,</span> rented<span class="token punctuation">:</span> <span class="token number">19</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+    <p>Réalise un script <code>script_5.js</code> qui affichera dans la console les questions suivantes et leurs réponses : </p>
+    <ul>
+        <li>Est-ce que tous les livres ont été au moins empruntés une fois ?</li>
+        <li>Quel est livre le plus emprunté ?</li>
+        <li>Quel est le livre le moins emprunté ?</li>
+        <li>Trouve le livre avec l'ID: <code>873495</code> ;</li>
+        <li>Supprime le livre avec l'ID: <code>133712</code> ;</li>
+        <li>Trie les livres par ordre alphabétique (sans celui avec l'ID <code>133712</code> car il est supprimé).</li>
+    </ul>
+    <hr>
+</body>
+<script src="script_5.js"></script>
+
+</html>

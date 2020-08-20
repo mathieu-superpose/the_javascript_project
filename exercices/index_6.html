@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Script 6</title>
+</head>
+
+<body>
+    <hr>
+    <h1>Script 6</h1>
+    <hr>
+    <p>Sous Linux : F12 puis onglet "console"</p>
+    <p>Sous Mac : ALT + CMD + I</p>
+    <hr>
+    <h4>2.4.1. Code la vie</h4>
+    <p>Tu as lu le titre ? Allez, tu as 1h... ok on rigole 😁. <br>
+        L'un des premiers codes dont tu as entendu parler est probablement le code génétique qui permet de traduire de l'ARN (c'est une copie de notre ADN) en protéines (qui constituent notre corps). Pourquoi ne pas faire un exercice là-dessus ?</p>
+    <p>D'abord quelques explications (on va pas te faire un cours de bio complet). Pour simplifier, l'ARN (comme l'ADN) est une suite de molécules appelées nucléotides et qu'on peut représenter par 4 lettres : A - U - G - C (pour l'ADN, remplacer U par T). Donc un morceau d'ARN peut se représenter sous la forme d'une suite de lettres : "UUACGCAGUAGA".</p>
+    <p> Notre corps est ensuite capable de lire cet ARN en le découpant par groupes de 3 lettres (appelés "codons"). Dans notre exemple ça donnerait : "UUA-CGC-AGU-AGA". Ensuite chaque codon peut être transformé en un "acide aminé" qui est juste un "morceau de protéine". Mais quelle est la règle qui dit que tel codon doit être remplacé par tel acide aminé ? C'est le fameux code génétique dont voici un extrait ci-dessous :</p>
+    <p>UCU ou UCC ou UCA ou UCG ou AGU ou AGC =&gt; Sérine <br>
+        CCU ou CCC ou CCA ou CCG =&gt; Proline <br>
+        UUA ou UUG =&gt; Leucine <br>
+        UUU ou UUC =&gt; Phénylalanine <br>
+        CGU ou CGC ou CGA ou CGG ou AGA ou AGG =&gt; Arginine <br>
+        UAU ou UAC =&gt; Tyrosine</p>
+    <p>Notre exemple d'ARN "UUA-CGC-AGU-AGA" donnerait donc la protéine suivante : "Leucine-Arginine-Sérine-Arginine" </p>
+    <p>Le code génétique complet permet de transformer les 64 codons possibles en 20 acides aminés. On va se contenter, sur cet exercice, de prendre juste les 6 acides aminés ci-dessus avec leurs codons correspondants.</p>
+    <p>Je veux que tu codes un script <code>script_6.js</code> en JS qui puisse transformer un ARN présenté sous forme de string "UUACGCAGUAGA" en une suite d'acides aminés que tu imprimeras en console : "Leucine-Arginine-Sérine-Arginine"</p>
+    <p>Afin de comparer ton travail avec les autres moussaillons, voici 2 ARN à traduire en protéines :</p>
+    <ul>
+        <li>CCGUCGUUGCGCUACAGC</li>
+        <li>CCUCGCCGGUACUUCUCG</li>
+    </ul>
+    <hr>
+</body>
+<script src="script_6.js"></script>
+
+</html>

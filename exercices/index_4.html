@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Script 4</title>
+</head>
+
+<body>
+    <hr>
+    <h1>Script 4</h1>
+    <hr>
+    <p>Sous Linux : F12 puis onglet "console"</p>
+    <p>Sous Mac : ALT + CMD + I</p>
+    <hr>
+    <h3>2.3. Analyses de données</h3>
+    <h4>2.3.1. Startup Nation </h4>
+    <p>Tu es en train d'écrire un livre sur les entrepreneurs américains et tu te renseignes sur leurs dates de naissance pour voir si tu ne peux pas identifier un millésime à succès.</p>
+    <p>Pendant ta recherche tu tombes sur une array contenant des entrepreneurs connus et leurs dates de naissance.</p>
+    <pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">const</span> entrepreneurs <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Steve'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Jobs'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1955</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Oprah'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Winfrey'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1954</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Bill'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Gates'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1955</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Sheryl'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Sandberg'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1969</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Mark'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Zuckerberg'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1984</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Beyonce'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Knowles'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1981</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Jeff'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Bezos'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1964</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Diane'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Hendricks'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1947</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Elon'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Musk'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1971</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Marissa'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Mayer'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1975</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Walt'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Disney'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1901</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Larry'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Page'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1973</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Jack'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Dorsey'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1976</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Evan'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Spiegel'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1990</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Brian'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Chesky'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1981</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Travis'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Kalanick'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1976</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Marc'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Andreessen'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1971</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> first<span class="token punctuation">:</span> <span class="token string">'Peter'</span><span class="token punctuation">,</span> last<span class="token punctuation">:</span> <span class="token string">'Thiel'</span><span class="token punctuation">,</span> year<span class="token punctuation">:</span> <span class="token number">1967</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+    <p>Réalise un script <code>script_4.js</code> qui affichera dans la console les questions suivantes et leur réponses : </p>
+    <ul>
+        <li>Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70 ;</li>
+        <li>Sors une array qui contient le prénom et le nom des entrepreneurs ;</li>
+        <li>Quel âge aurait chaque inventeur aujourd'hui ?</li>
+        <li>Trie les entrepreneurs par ordre alphabétique du nom de famille.</li>
+    </ul>
+    <hr>
+</body>
+<script src="script_4.js"></script>
+
+</html>

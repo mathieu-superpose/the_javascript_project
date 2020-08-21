@@ -16,7 +16,7 @@ if (reponse[reponse.length - 1] === "?") {
 // ---------- si 100% en majuscules -> "Pwa, calme-toi..." --------------------------------------------------------------
 let reponseMaj = reponse.toUpperCase();
 
-if (reponseMaj === reponse){
+if (reponseMaj === reponse && reponse !== ""){
   dialogue[dialogueIndex] = "Pwa, calme-toi...";
   dialogueIndex++;
 }

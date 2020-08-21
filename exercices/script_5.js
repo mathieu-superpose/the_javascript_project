@@ -55,7 +55,14 @@ function tri(a,b)
  
 let booksParRented = books.sort(tri);
 let lastBookParRented = booksParRented[booksParRented.length - 1];
-console.log(lastBookParRented.title + "est le livre le plus emprunté ( " + lastBookParRented.rented + " fois).");
+console.log(lastBookParRented.title + " est le livre le plus emprunté ( " + lastBookParRented.rented + " fois).");
+
+// ---------- Quel est livre le moins emprunté ? --------------------------------------------------------------------------
+console.log("");
+console.log("Quel est livre le moins emprunté ?");
+
+let firstBookParRented = booksParRented[0];
+console.log(firstBookParRented.title + " est le livre le moins emprunté ( " + firstBookParRented.rented + " fois).");
 
 
 // ---------- Trouve le livre avec l'ID: 873495 --------------------------------------------------------------------------
@@ -97,7 +104,3 @@ var booksParTitre = books.sort(triAlphabet);
 for(let count = 0; count < booksParTitre.length; count++){
   console.log(booksParTitre[count].title);
 }
-
-
-
-
